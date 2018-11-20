@@ -1,0 +1,23 @@
+.calculator{
+  width: 90%;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  &__screen{
+
+  }
+
+  &__keys{
+    display: grid;
+    grid-gap: .25rem;
+    grid-template-columns: repeat(4,1fr);
+  }
+
+
+
+  [data-math=add],
+  [data-operation=equals]{
+    grid-row: span 2;
+  }
+}

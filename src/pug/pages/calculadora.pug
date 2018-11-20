@@ -1,0 +1,32 @@
+extends ../config/template
+append config
+  -pageTitle = 'Calculadora'
+  -pageDescription = 'Calculadora con JavaScript'
+  -pageImage = ''
+
+block main
+  //- Text Markdown
+  include:markdown-it(html) md/bienvenidos.md
+  //- Calculator App
+  .calculator#js-calculator
+    .calculator__screen#js-calculator-screen
+    .calculator__keys#js-calculator-keys
+      button(data-operation="clear") C
+      button(data-math="divide") /
+      button(data-math="multiply") *
+      button(data-math="minus") -
+      button(data-number="7") 7
+      button(data-number="8") 8
+      button(data-number="9") 9
+      button(data-math="add") +
+      button(data-number="4") 4
+      button(data-number="5") 5
+      button(data-number="6") 6
+      button(data-number="1") 1
+      button(data-number="2") 2
+      button(data-number="3") 3
+      button(data-operation="equals") =
+      button(data-number="0") 0
+      button(data-number=".") .
+    
+  

@@ -1,0 +1,82 @@
+/*
+  This boilerplate is based in ITCSS and SMACSS
+*/
+/* line 1, src/scss/base/base.scss */
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* line 7, src/scss/base/base.scss */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* line 2, src/scss/components/_calculator.scss */
+.Title {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+}
+
+/* line 11, src/scss/components/_calculator.scss */
+.calculator {
+  width: 90%;
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: sans-serif;
+}
+
+/* line 18, src/scss/components/_calculator.scss */
+.calculator__screen {
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+  padding: 1rem;
+  border-radius: .25rem;
+  margin-bottom: .25rem;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+/* line 28, src/scss/components/_calculator.scss */
+.calculator__keys {
+  display: grid;
+  grid-gap: .25rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+/* line 34, src/scss/components/_calculator.scss */
+.calculator__keys :first-child {
+  height: 0;
+  padding-bottom: 100%;
+}
+
+/* line 40, src/scss/components/_calculator.scss */
+.calculator button {
+  background: lightgray;
+  color: #121212;
+  border: none;
+  font-size: 1.25em;
+}
+
+/* line 47, src/scss/components/_calculator.scss */
+.calculator [data-math=add],
+.calculator [data-operation=equals] {
+  grid-row: span 2;
+}
+
+/* line 52, src/scss/components/_calculator.scss */
+.calculator [data-number="0"] {
+  grid-column: span 2;
+}
+
+/* line 56, src/scss/components/_calculator.scss */
+.calculator [data-operation=clear] {
+  grid-column: 1;
+  grid-row: 1;
+}

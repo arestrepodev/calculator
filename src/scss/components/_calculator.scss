@@ -1,23 +1,60 @@
+// Title
+.Title{
+  text-align: center;
+  color: rgba(#000,.8);
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+}
+
+
+// Calculator App
 .calculator{
   width: 90%;
-  max-width: 900px;
+  max-width: 400px;
   margin-right: auto;
   margin-left: auto;
+  font-family: $font-family;
   
   &__screen{
-
+    background: rgba(#000,.8);
+    color: #FFF;
+    padding: 1rem;
+    border-radius: .25rem; 
+    margin-bottom: .25rem;
+    text-align: right;
+    font-size: 1.5em;
   }
 
   &__keys{
     display: grid;
     grid-gap: .25rem;
     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+
+    :first-child{
+      height: 0;
+      padding-bottom: 100%;
+    }
   }
 
-
+  button{
+    background: lightgray;
+    color: #121212;
+    border: none;
+    font-size: 1.25em;
+  }
 
   [data-math=add],
   [data-operation=equals]{
     grid-row: span 2;
+  }
+
+  [data-number="0"]{
+    grid-column: span 2;
+  }
+
+  [data-operation=clear]{
+    grid-column: 1;
+    grid-row: 1;
   }
 }
